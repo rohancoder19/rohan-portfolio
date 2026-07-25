@@ -1,0 +1,217 @@
+.hero {
+  padding: 180px 0 110px;
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 64px;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-eyebrow {
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 5.5vw, 4.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #ffffff 0%, var(--text) 70%, var(--text-muted) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero .role {
+  font-family: var(--font-mono);
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  color: var(--signal);
+  font-weight: 600;
+  margin-top: 16px;
+  text-shadow: 0 0 16px var(--signal-glow);
+}
+
+.hero .sub {
+  font-family: var(--font-mono);
+  font-size: 0.94rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+  letter-spacing: 0.02em;
+}
+
+.hero p.bio {
+  font-size: 1.06rem;
+  color: var(--text-muted);
+  max-width: 54ch;
+  margin-top: 24px;
+  line-height: 1.7;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  padding: 8px 16px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--hairline-strong);
+  border-radius: 24px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.status-pill .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--amber);
+  box-shadow: 0 0 10px rgba(232, 179, 77, 0.9);
+  animation: pulseAmber 2s infinite;
+}
+
+@keyframes pulseAmber {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(232, 179, 77, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(232, 179, 77, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(232, 179, 77, 0); }
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+/* Schematic Diagram & Circuit Styling */
+.schematic-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
+}
+
+.schematic {
+  width: 100%;
+  height: auto;
+  max-width: 520px;
+  cursor: pointer;
+}
+
+.schematic .trace {
+  fill: none;
+  stroke: var(--hairline-strong);
+  stroke-width: 1.6;
+  transition: stroke 0.3s ease;
+}
+
+.schematic:hover .trace {
+  stroke: rgba(94, 234, 212, 0.4);
+}
+
+.schematic .pulse {
+  fill: none;
+  stroke: var(--signal);
+  stroke-width: 2;
+  stroke-dasharray: 6 220;
+  animation: travel 4s linear infinite;
+  opacity: 0.95;
+  filter: drop-shadow(0 0 6px var(--signal));
+}
+
+.schematic .pulse.b {
+  animation-delay: 1.2s;
+  stroke: var(--copper-bright);
+  filter: drop-shadow(0 0 6px var(--copper-bright));
+}
+
+.schematic .pulse.c {
+  animation-delay: 2.4s;
+}
+
+@keyframes travel {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -450; }
+}
+
+.schematic .pad {
+  fill: var(--copper);
+  transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.schematic:hover .pad {
+  fill: var(--signal);
+  filter: drop-shadow(0 0 6px var(--signal));
+}
+
+.schematic .node-box {
+  fill: var(--bg-panel);
+  stroke: var(--hairline-strong);
+  stroke-width: 1.4;
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.schematic:hover .node-box {
+  stroke: var(--signal);
+  fill: var(--glass-bg-hover);
+}
+
+.schematic .node-label {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  fill: var(--text-muted);
+  letter-spacing: 0.05em;
+  transition: fill 0.3s ease;
+}
+
+.schematic:hover .node-label {
+  fill: var(--text);
+}
+
+.schematic .chip-box {
+  fill: var(--bg-panel-deep);
+  stroke: var(--copper);
+  stroke-width: 2;
+  transition: stroke 0.3s ease, filter 0.3s ease;
+}
+
+.schematic:hover .chip-box {
+  stroke: var(--signal);
+  filter: drop-shadow(0 0 12px rgba(94, 234, 212, 0.3));
+}
+
+.schematic .chip-label {
+  font-family: var(--font-mono);
+  font-weight: 800;
+  font-size: 24px;
+  fill: var(--signal);
+  transition: fill 0.3s ease;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 140px 0 70px;
+    min-height: auto;
+  }
+  .hero .wrap {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .schematic {
+    max-width: 440px;
+    margin: 20px auto 0;
+  }
+}

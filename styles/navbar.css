@@ -1,0 +1,161 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(6, 19, 14, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--hairline);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.nav .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.nav-logo {
+  font-family: var(--font-mono);
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.nav-logo:hover {
+  color: var(--signal-bright);
+}
+
+.nav-logo .chip-logo {
+  width: 28px;
+  height: 22px;
+  border: 1.5px solid var(--copper);
+  border-radius: 4px;
+  position: relative;
+  display: inline-block;
+  box-shadow: 0 0 10px var(--copper-glow);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-logo:hover .chip-logo {
+  border-color: var(--signal);
+  box-shadow: 0 0 14px var(--signal-glow);
+}
+
+.nav-logo .chip-logo::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  width: 6px;
+  height: 5px;
+  background: var(--bg-panel-deep);
+  border-top: 1.5px solid var(--copper);
+  border-left: 1.5px solid var(--copper);
+  border-right: 1.5px solid var(--copper);
+  border-radius: 2px 2px 0 0;
+  transition: border-color 0.2s ease;
+}
+
+.nav-logo:hover .chip-logo::before {
+  border-color: var(--signal);
+}
+
+.nav-links {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.nav-links a {
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-muted);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  transition: color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--signal);
+  background: rgba(94, 234, 212, 0.08);
+  box-shadow: 0 0 16px rgba(94, 234, 212, 0.08);
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--hairline-strong);
+  color: var(--text);
+  width: 40px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-toggle:hover {
+  border-color: var(--signal);
+  color: var(--signal);
+}
+
+@media (max-width: 760px) {
+  .nav-links {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    background: rgba(7, 24, 19, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--hairline);
+    padding: 12px 24px 24px;
+    display: none;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
+  }
+  
+  .nav-links.open {
+    display: flex;
+    animation: slideDown 0.25s ease-out;
+  }
+  
+  .nav-links a {
+    padding: 14px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

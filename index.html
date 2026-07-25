@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rohan Majumdar — Full-Stack &amp; AI Developer</title>
+<meta name="description" content="Portfolio of Rohan Majumdar, a B.Tech Electronics &amp; Computer Science student building full-stack apps, AI platforms, and robotics systems.">
+<meta name="theme-color" content="#06130e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Modular Design System Stylesheets -->
+<link rel="stylesheet" href="styles/variables.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/navbar.css">
+<link rel="stylesheet" href="styles/hero.css">
+<link rel="stylesheet" href="styles/about.css">
+<link rel="stylesheet" href="styles/skills.css">
+<link rel="stylesheet" href="styles/projects.css">
+<link rel="stylesheet" href="styles/contact.css">
+<link rel="stylesheet" href="styles/footer.css">
+</head>
+<body>
+
+<!-- Interactive Cyber Particle Canvas Background -->
+<canvas id="canvas-bg"></canvas>
+
+<nav class="nav" aria-label="Main Navigation">
+  <div class="wrap">
+    <a href="#top" class="nav-logo"><span class="chip-logo"></span>RM</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">≡</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow hero-fade" style="animation-delay:.05s">U0 · Profile</div>
+      <h1 class="hero-fade" style="animation-delay:.12s">Rohan<br>Majumdar</h1>
+      <div class="role hero-fade" style="animation-delay:.2s">Full-Stack &amp; AI Developer</div>
+      <div class="sub hero-fade" style="animation-delay:.26s">B.Tech, Electronics &amp; Computer Science — Narula Institute of Technology</div>
+      <p class="bio hero-fade" style="animation-delay:.34s">I build software and hardware systems that solve real problems — AI-powered web platforms on one end, autonomous robots that sense and react on the other. I like working across the whole stack: training a model, wiring a sensor, shipping the interface that ties it together.</p>
+      <div class="status-pill hero-fade" style="animation-delay:.42s"><span class="dot"></span>Open to internships &amp; collaborations</div>
+      <div class="hero-cta hero-fade" style="animation-delay:.5s">
+        <a href="#projects" class="btn btn--primary">View Projects</a>
+        <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+      </div>
+    </div>
+
+    <div class="schematic-container hero-fade" style="animation-delay:.4s">
+      <svg class="schematic" viewBox="0 0 520 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram showing web, AI, and robotics disciplines converging into one developer">
+        <path class="trace" d="M40,50 H260 V160 H366" />
+        <path class="trace" d="M40,160 H366" />
+        <path class="trace" d="M40,270 H260 V160 H366" />
+
+        <path class="pulse" d="M40,50 H260 V160 H366" />
+        <path class="pulse b" d="M40,160 H366" />
+        <path class="pulse c" d="M40,270 H260 V160 H366" />
+
+        <circle class="pad" cx="260" cy="50" r="3.5" />
+        <circle class="pad" cx="260" cy="270" r="3.5" />
+        <circle class="pad" cx="366" cy="160" r="4.5" />
+
+        <rect class="node-box" x="10" y="30" width="100" height="40" rx="4" />
+        <text class="node-label" x="60" y="54" text-anchor="middle">WEB</text>
+
+        <rect class="node-box" x="10" y="140" width="100" height="40" rx="4" />
+        <text class="node-label" x="60" y="164" text-anchor="middle">AI</text>
+
+        <rect class="node-box" x="10" y="250" width="100" height="40" rx="4" />
+        <text class="node-label" x="60" y="274" text-anchor="middle">ROBOTICS</text>
+
+        <rect class="chip-box" x="366" y="118" width="120" height="84" rx="6" />
+        <path d="M378,118 q8,-10 16,0 Z" fill="var(--bg)" stroke="var(--copper)" stroke-width="2" />
+        <text class="chip-label" x="426" y="167" text-anchor="middle">RM</text>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">U1 · About</div>
+        <h2>Hardware roots, software focus</h2>
+      </div>
+      <div class="about-grid">
+        <div class="reveal">
+          <p>I'm an Electronics &amp; Computer Science undergrad at Narula Institute of Technology, which means my work usually sits somewhere between a browser tab and a breadboard. On the software side, I build full-stack web apps and AI-powered platforms — career tools, SaaS products, emergency-response systems. On the hardware side, I work with microcontrollers and computer vision to get robots to sense, coordinate, and act.</p>
+          <p>What connects the two is the same instinct: take a real, slightly messy problem and build something that actually works end to end, not just a demo.</p>
+        </div>
+        <dl class="spec reveal" id="specSheetCard">
+          <div class="spec-title"><span>Spec Sheet</span></div>
+          <div id="specSheetRows">
+            <!-- Dynamically populated from js/data/profile.js -->
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">U2 · Skills</div>
+        <h2>What's under the hood</h2>
+      </div>
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Dynamically populated from js/data/skills.js -->
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">U3 · Projects</div>
+        <h2>Selected builds</h2>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Dynamically populated from js/data/projects.js -->
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">J1 · Contact</div>
+        <h2>Let's build something</h2>
+      </div>
+      <div class="contact-panel reveal" id="contactPanel">
+        <!-- Dynamically populated from js/data/contact.js -->
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Rohan Majumdar</p>
+    <p>Built one component at a time.</p>
+  </div>
+</footer>
+
+<!-- Modular JavaScript Architecture -->
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>

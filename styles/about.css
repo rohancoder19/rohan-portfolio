@@ -1,0 +1,103 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.about-grid p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.about-grid p + p {
+  margin-top: 18px;
+}
+
+.spec {
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--hairline-strong);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--glass-shadow);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spec:hover {
+  border-color: rgba(94, 234, 212, 0.35);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 20px rgba(94, 234, 212, 0.08);
+}
+
+.spec-title {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--hairline);
+  background: rgba(7, 24, 19, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spec-title::after {
+  content: "● ● ●";
+  font-size: 0.6rem;
+  letter-spacing: 4px;
+  color: var(--hairline-strong);
+}
+
+.spec-row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--hairline);
+  font-size: 0.94rem;
+  transition: background 0.2s ease;
+}
+
+.spec-row:last-child {
+  border-bottom: none;
+}
+
+.spec-row:hover {
+  background: rgba(94, 234, 212, 0.04);
+}
+
+.spec-row dt {
+  font-family: var(--font-mono);
+  color: var(--copper-bright);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding-top: 2px;
+}
+
+.spec-row dd {
+  margin: 0;
+  color: var(--text);
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 520px) {
+  .spec-row {
+    grid-template-columns: 1fr;
+    row-gap: 6px;
+  }
+  .spec-row dt {
+    padding-top: 0;
+  }
+}

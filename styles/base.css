@@ -1,0 +1,234 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg);
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(193, 127, 69, 0.15) 0px, transparent 400px),
+    radial-gradient(circle at 85% 80%, rgba(94, 234, 212, 0.12) 0px, transparent 450px),
+    linear-gradient(rgba(94, 234, 212, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(94, 234, 212, 0.04) 1px, transparent 1px),
+    var(--bg);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Interactive Cyber Canvas Background */
+#canvas-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.65;
+}
+
+main, header, nav, footer {
+  position: relative;
+  z-index: 1;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-family: var(--font-mono);
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 3px;
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Section Shared Typography & Header */
+.section {
+  padding: 100px 0;
+  border-top: 1px solid var(--hairline);
+}
+
+.section h2 {
+  font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+  margin-top: 14px;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, var(--text) 0%, var(--text-muted) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-head {
+  margin-bottom: 52px;
+  max-width: 65ch;
+}
+
+/* Shared Utility Classes */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--copper-bright);
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 1px;
+  background: var(--copper);
+  box-shadow: 0 0 8px var(--copper-glow);
+  flex-shrink: 0;
+}
+
+.btn {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 13px 24px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.btn--primary {
+  background: var(--copper);
+  color: var(--bg-panel-deep);
+  box-shadow: 0 4px 14px rgba(193, 127, 69, 0.25);
+}
+
+.btn--primary:hover {
+  background: var(--copper-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(193, 127, 69, 0.4);
+}
+
+.btn--ghost {
+  border-color: var(--hairline-strong);
+  color: var(--signal);
+  background: rgba(94, 234, 212, 0.03);
+}
+
+.btn--ghost:hover {
+  border-color: var(--signal);
+  background: rgba(94, 234, 212, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(94, 234, 212, 0.15);
+}
+
+.chip {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text);
+  background: var(--bg-panel-deep);
+  border: 1px solid var(--hairline-strong);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  white-space: nowrap;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chip:hover {
+  border-color: var(--signal);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(94, 234, 212, 0.15);
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Scroll Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-fade {
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 520px) {
+  .wrap {
+    padding: 0 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

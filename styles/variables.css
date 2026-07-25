@@ -1,0 +1,36 @@
+:root {
+  /* Color Palette - Deep Obsidian & Cyber Emerald */
+  --bg: #06130e;
+  --bg-panel: #0e2920;
+  --bg-panel-deep: #071813;
+  
+  /* Glassmorphism Tokens */
+  --glass-bg: rgba(14, 41, 32, 0.72);
+  --glass-bg-hover: rgba(20, 56, 44, 0.85);
+  --glass-border: rgba(94, 234, 212, 0.18);
+  --glass-border-hover: rgba(94, 234, 212, 0.45);
+  --glass-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.55);
+  
+  /* Signal & Accent Colors */
+  --hairline: rgba(94, 234, 212, 0.14);
+  --hairline-strong: rgba(94, 234, 212, 0.28);
+  --text: #edeae0;
+  --text-muted: #a9c2b6;
+  --copper: #c17f45;
+  --copper-bright: #e0a06b;
+  --copper-glow: rgba(224, 160, 107, 0.35);
+  --signal: #5eead4;
+  --signal-bright: #8cfaf0;
+  --signal-glow: rgba(94, 234, 212, 0.35);
+  --amber: #e8b34d;
+  
+  /* Typography */
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --font-sans: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  
+  /* Layout & Geometry */
+  --maxw: 1180px;
+  --radius: 6px;
+  --radius-sm: 4px;
+  --radius-lg: 12px;
+}

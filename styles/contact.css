@@ -1,0 +1,108 @@
+.contact-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--glass-shadow);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-panel:hover {
+  border-color: rgba(94, 234, 212, 0.35);
+  box-shadow: 0 24px 48px -15px rgba(0, 0, 0, 0.65), 0 0 25px rgba(94, 234, 212, 0.08);
+}
+
+.contact-panel-head {
+  padding: 18px 28px;
+  border-bottom: 1px solid var(--hairline);
+  background: rgba(7, 24, 19, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contact-panel-head .eyebrow {
+  margin: 0;
+}
+
+.contact-panel-head span.note {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.pin-row {
+  display: grid;
+  grid-template-columns: 80px 150px 1fr auto;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 28px;
+  border-bottom: 1px solid var(--hairline);
+  text-decoration: none;
+  color: var(--text);
+  transition: background 0.25s ease, padding-left 0.25s ease;
+}
+
+.pin-row:last-child {
+  border-bottom: none;
+}
+
+.pin-row:hover {
+  background: rgba(94, 234, 212, 0.06);
+  padding-left: 34px;
+}
+
+.pin-id {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--copper-bright);
+  font-weight: 600;
+}
+
+.pin-label {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.pin-value {
+  font-size: 1rem;
+  word-break: break-word;
+  font-weight: 500;
+}
+
+.pin-row:hover .pin-value {
+  color: var(--signal-bright);
+}
+
+.pin-arrow {
+  font-family: var(--font-mono);
+  color: var(--signal);
+  font-size: 1.2rem;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.25s ease;
+}
+
+.pin-row:hover .pin-arrow {
+  transform: translateX(6px);
+  color: var(--signal-bright);
+}
+
+@media (max-width: 640px) {
+  .pin-row {
+    grid-template-columns: 1fr auto;
+    row-gap: 6px;
+    padding: 18px 20px;
+  }
+  .pin-row:hover {
+    padding-left: 24px;
+  }
+  .pin-id {
+    display: none;
+  }
+}

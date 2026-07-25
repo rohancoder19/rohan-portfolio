@@ -1,0 +1,21 @@
+footer {
+  border-top: 1px solid var(--hairline);
+  padding: 36px 0 48px;
+  background: rgba(6, 19, 14, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+footer p {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
