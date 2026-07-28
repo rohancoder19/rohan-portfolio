@@ -363,12 +363,12 @@ export function initHero3DCore() {
   // -------------------------------------------------------------
 
   const planetsData = [
-    { name: 'Mercury', radius: 0.18, distance: 2.2, speed: 2.2, texture: createMercuryTexture(), specular: 0x222222, glow: 0x888888 },
+    { name: 'Mercury', radius: 0.18, distance: 2.2, speed: 2.2, texture: createMercuryTexture(), specular: 0x222222, glow: 0x888888, badge: 'Cloud Computing' },
     { name: 'Venus', radius: 0.28, distance: 3.1, speed: 1.6, texture: createVenusTexture(), specular: 0x443311, glow: 0xe8cf94 },
     { name: 'Earth', radius: 0.34, distance: 4.2, speed: 1.1, texture: createEarthTexture(), specular: 0x5eead4, glow: 0x4198d7, hasClouds: true, hasMoon: true, badge: 'FULL-STACK' },
     { name: 'Mars', radius: 0.24, distance: 5.3, speed: 0.85, texture: createMarsTexture(), specular: 0x331111, glow: 0xbc4749 },
     { name: 'Jupiter', radius: 0.72, distance: 6.8, speed: 0.55, texture: createJupiterTexture(), specular: 0x553311, glow: 0xd4a373, badge: 'AI & ML' },
-    { name: 'Saturn', radius: 0.58, distance: 8.5, speed: 0.38, texture: createSaturnTexture(), specular: 0x554422, glow: 0xe9c46a, hasRings: true, badge: 'ROBOTICS' },
+    { name: 'Saturn', radius: 0.58, distance: 8.5, speed: 0.38, texture: createSaturnTexture(), specular: 0x554422, glow: 0xe9c46a, hasRings: true, badge: 'ROBOTICS & IOT' },
     { name: 'Uranus', radius: 0.42, distance: 10.0, speed: 0.26, texture: createUranusTexture(), specular: 0x224444, glow: 0x56b3b4 },
     { name: 'Neptune', radius: 0.40, distance: 11.4, speed: 0.18, texture: createNeptuneTexture(), specular: 0x112244, glow: 0x4361ee }
   ];
