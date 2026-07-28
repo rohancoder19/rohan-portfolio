@@ -124,28 +124,6 @@
   outline: none;
 }
 
-.hero-3d-hint {
-  margin-top: 12px;
-  padding: 6px 14px;
-  background: var(--glass-bg);
-  backdrop-filter: blur(8px);
-  border: 1px solid var(--hairline-strong);
-  border-radius: 20px;
-  font-family: var(--font-mono);
-  font-size: 0.76rem;
-  color: var(--text-muted);
-  letter-spacing: 0.04em;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-}
-
-.hero-3d-hint .hint-icon {
-  color: var(--signal);
-  animation: pulseAmber 2s infinite;
-}
-
 @media (max-width: 900px) {
   .hero {
     padding: 140px 0 70px;
