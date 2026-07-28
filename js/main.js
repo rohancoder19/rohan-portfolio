@@ -3,8 +3,9 @@ import { initNavbar } from './components/navbar.js';
 import { renderSkillsSection } from './components/skillsSection.js';
 import { renderProjectsSection } from './components/projectsSection.js';
 import { renderContactSection } from './components/contactSection.js';
-import { initHeroSchematic } from './components/heroSchematic.js';
 import { initCanvasBackground } from './components/canvasBackground.js';
+import { initHero3DCore } from './components/hero3DCore.js';
+import { initCardTilt } from './components/cardTilt.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Render data-driven sections
@@ -13,12 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
   renderProjectsSection();
   renderContactSection();
 
-  // 2. Initialize interactive UI components
+  // 2. Initialize interactive 3D UI components
   initNavbar();
-  initHeroSchematic();
+  initHero3DCore();
   initCanvasBackground();
 
-  // 3. Setup Scroll Reveal Intersection Observer
+  // 3. Attach 3D Perspective Tilt to Spec Sheet card & Contact panel
+  initCardTilt('.spec');
+  initCardTilt('.contact-panel');
+
+  // 4. Setup Scroll Reveal Intersection Observer
   initScrollReveal();
 });
 

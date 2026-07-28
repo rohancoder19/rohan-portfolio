@@ -20,6 +20,8 @@
 <link rel="stylesheet" href="styles/projects.css">
 <link rel="stylesheet" href="styles/contact.css">
 <link rel="stylesheet" href="styles/footer.css">
+<!-- Three.js 3D Engine -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
 
@@ -54,33 +56,11 @@
       </div>
     </div>
 
-    <div class="schematic-container hero-fade" style="animation-delay:.4s">
-      <svg class="schematic" viewBox="0 0 520 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram showing web, AI, and robotics disciplines converging into one developer">
-        <path class="trace" d="M40,50 H260 V160 H366" />
-        <path class="trace" d="M40,160 H366" />
-        <path class="trace" d="M40,270 H260 V160 H366" />
-
-        <path class="pulse" d="M40,50 H260 V160 H366" />
-        <path class="pulse b" d="M40,160 H366" />
-        <path class="pulse c" d="M40,270 H260 V160 H366" />
-
-        <circle class="pad" cx="260" cy="50" r="3.5" />
-        <circle class="pad" cx="260" cy="270" r="3.5" />
-        <circle class="pad" cx="366" cy="160" r="4.5" />
-
-        <rect class="node-box" x="10" y="30" width="100" height="40" rx="4" />
-        <text class="node-label" x="60" y="54" text-anchor="middle">WEB</text>
-
-        <rect class="node-box" x="10" y="140" width="100" height="40" rx="4" />
-        <text class="node-label" x="60" y="164" text-anchor="middle">AI</text>
-
-        <rect class="node-box" x="10" y="250" width="100" height="40" rx="4" />
-        <text class="node-label" x="60" y="274" text-anchor="middle">ROBOTICS</text>
-
-        <rect class="chip-box" x="366" y="118" width="120" height="84" rx="6" />
-        <path d="M378,118 q8,-10 16,0 Z" fill="var(--bg)" stroke="var(--copper)" stroke-width="2" />
-        <text class="chip-label" x="426" y="167" text-anchor="middle">RM</text>
-      </svg>
+    <div class="hero-3d-wrapper hero-fade" style="animation-delay:.4s" id="hero3DWrapper">
+      <div id="hero-3d-core" class="hero-3d-canvas-container"></div>
+      <div class="hero-3d-hint">
+        <span class="hint-icon">✦</span> Interactive 3D Cyber Core · Drag to rotate
+      </div>
     </div>
   </div>
 </header>

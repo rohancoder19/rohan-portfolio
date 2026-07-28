@@ -37,13 +37,34 @@
   opacity: 1;
 }
 
+/* Dynamic 3D mouse spotlight glare overlay */
+.proj-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(450px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(94, 234, 212, 0.18), transparent 65%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.proj-card:hover::after {
+  opacity: 1;
+}
+
 .proj-card:hover {
-  border-color: rgba(94, 234, 212, 0.4);
-  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.65), 0 0 30px rgba(94, 234, 212, 0.1);
+  border-color: rgba(94, 234, 212, 0.45);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.75), 0 0 35px rgba(94, 234, 212, 0.15);
 }
 
 .proj-card .eyebrow {
   margin-bottom: 16px;
+  transform: translateZ(24px);
+  transition: transform 0.2s ease;
 }
 
 .proj-card h3 {
@@ -53,7 +74,8 @@
   margin-bottom: 12px;
   font-family: var(--font-sans);
   letter-spacing: -0.01em;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
+  transform: translateZ(36px);
 }
 
 .proj-card:hover h3 {
@@ -65,10 +87,14 @@
   font-size: 0.98rem;
   line-height: 1.65;
   flex-grow: 1;
+  transform: translateZ(20px);
+  transition: transform 0.2s ease;
 }
 
 .proj-card .chip-row {
   margin-top: 22px;
+  transform: translateZ(28px);
+  transition: transform 0.2s ease;
 }
 
 .proj-card .chip {
@@ -82,6 +108,8 @@
   gap: 12px;
   margin-top: 24px;
   flex-wrap: wrap;
+  transform: translateZ(32px);
+  transition: transform 0.2s ease;
 }
 
 .proj-links a {

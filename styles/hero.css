@@ -94,111 +94,56 @@
   flex-wrap: wrap;
 }
 
-/* Schematic Diagram & Circuit Styling */
-.schematic-container {
+/* 3D Holographic Cyber Core Wrapper */
+.hero-3d-wrapper {
   position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
+  justify-content: center;
+  perspective: 1200px;
 }
 
-.schematic {
+.hero-3d-canvas-container {
   width: 100%;
-  height: auto;
-  max-width: 520px;
-  cursor: pointer;
+  max-width: 480px;
+  height: 480px;
+  position: relative;
+  cursor: grab;
+  filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.65));
+  transition: transform 0.3s ease;
 }
 
-.schematic .trace {
-  fill: none;
-  stroke: var(--hairline-strong);
-  stroke-width: 1.6;
-  transition: stroke 0.3s ease;
+.hero-3d-canvas-container:active {
+  cursor: grabbing;
 }
 
-.schematic:hover .trace {
-  stroke: rgba(94, 234, 212, 0.4);
+.hero-3d-canvas-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  outline: none;
 }
 
-.schematic .pulse {
-  fill: none;
-  stroke: var(--signal);
-  stroke-width: 2;
-  stroke-dasharray: 6 220;
-  animation: travel 4s linear infinite;
-  opacity: 0.95;
-  filter: drop-shadow(0 0 6px var(--signal));
-}
-
-.schematic .pulse.b {
-  animation-delay: 1.2s;
-  stroke: var(--copper-bright);
-  filter: drop-shadow(0 0 6px var(--copper-bright));
-}
-
-.schematic .pulse.c {
-  animation-delay: 2.4s;
-}
-
-@keyframes travel {
-  from { stroke-dashoffset: 0; }
-  to { stroke-dashoffset: -450; }
-}
-
-.schematic .pad {
-  fill: var(--copper);
-  transition: fill 0.3s ease, transform 0.3s ease;
-}
-
-.schematic:hover .pad {
-  fill: var(--signal);
-  filter: drop-shadow(0 0 6px var(--signal));
-}
-
-.schematic .node-box {
-  fill: var(--bg-panel);
-  stroke: var(--hairline-strong);
-  stroke-width: 1.4;
-  transition: fill 0.3s ease, stroke 0.3s ease;
-}
-
-.schematic:hover .node-box {
-  stroke: var(--signal);
-  fill: var(--glass-bg-hover);
-}
-
-.schematic .node-label {
+.hero-3d-hint {
+  margin-top: 12px;
+  padding: 6px 14px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--hairline-strong);
+  border-radius: 20px;
   font-family: var(--font-mono);
-  font-size: 13px;
-  font-weight: 600;
-  fill: var(--text-muted);
-  letter-spacing: 0.05em;
-  transition: fill 0.3s ease;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
-.schematic:hover .node-label {
-  fill: var(--text);
-}
-
-.schematic .chip-box {
-  fill: var(--bg-panel-deep);
-  stroke: var(--copper);
-  stroke-width: 2;
-  transition: stroke 0.3s ease, filter 0.3s ease;
-}
-
-.schematic:hover .chip-box {
-  stroke: var(--signal);
-  filter: drop-shadow(0 0 12px rgba(94, 234, 212, 0.3));
-}
-
-.schematic .chip-label {
-  font-family: var(--font-mono);
-  font-weight: 800;
-  font-size: 24px;
-  fill: var(--signal);
-  transition: fill 0.3s ease;
+.hero-3d-hint .hint-icon {
+  color: var(--signal);
+  animation: pulseAmber 2s infinite;
 }
 
 @media (max-width: 900px) {
