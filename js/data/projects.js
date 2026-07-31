@@ -18,7 +18,7 @@ export const projectsData = [
     tags: ["React", "Node.js", "Express.js", "MongoDB", "Python", "AI APIs"],
     links: {
       github: "https://github.com/rohancoder19/ai-marketing-saas",
-      demo: "https://ai-marketing-saas-101.vercel.app/"
+      demo: "https://ai-marketing-saas2.vercel.app/"
     }
   },
   {
