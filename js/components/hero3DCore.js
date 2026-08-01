@@ -373,6 +373,7 @@ export function initHero3DCore() {
     { name: 'Neptune', radius: 0.40, distance: 11.4, speed: 0.18, texture: createNeptuneTexture(), specular: 0x112244, glow: 0x4361ee }
   ];
 
+  
   const planets = [];
 
   planetsData.forEach(pData => {

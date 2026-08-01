@@ -4,7 +4,7 @@ import { renderSkillsSection } from './components/skillsSection.js';
 import { renderProjectsSection } from './components/projectsSection.js';
 import { renderContactSection } from './components/contactSection.js';
 import { initCanvasBackground } from './components/canvasBackground.js';
-import { initHero3DCore } from './components/hero3DCore.js';
+import { initHeroSchematic } from './components/heroSchematic.js';
 import { initCardTilt } from './components/cardTilt.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2. Initialize interactive 3D UI components
   initNavbar();
-  initHero3DCore();
+  initHeroSchematic();
   initCanvasBackground();
 
   // 3. Attach 3D Perspective Tilt to Spec Sheet card & Contact panel

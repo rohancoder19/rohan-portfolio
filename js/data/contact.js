@@ -13,13 +13,13 @@ export const contactData = {
     {
       id: "J1-2",
       label: "LinkedIn",
-      value: "/in/rohan-majumdar",
+      value: "linkedin.com/in/rohan-majumdar-774852359",
       href: "https://www.linkedin.com/in/rohan-majumdar-774852359/"
     },
     {
       id: "J1-3",
       label: "GitHub",
-      value: "/rohancoder19",
+      value: "github.com/rohancoder19",
       href: "https://github.com/rohancoder19"
     }
   ]
