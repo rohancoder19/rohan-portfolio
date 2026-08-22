@@ -62,7 +62,7 @@ My-Portfolio/
 | Project | Category | Tech Stack | Links |
 | :--- | :--- | :--- | :--- |
 | **Skill Bridge AI** | Career Tech · AI Platform | React, Node.js, Express, MongoDB, Python, AI APIs | [GitHub](https://github.com/rohancoder19/skill-bridge-ai) · [Live Demo](https://skill-bridge-ai-bx90.onrender.com) |
-| **AI Marketing SaaS** | Marketing · SaaS | React, Node.js, Express, MongoDB, Python, AI APIs | [GitHub](https://github.com/rohancoder19/ai-marketing-saas) · [Live Demo](https://ai-marketing-saas2.vercel.app/) |
+| **AI Marketing SaaS** | Marketing · SaaS | React, Node.js, Express, MongoDB, Python, AI APIs | [GitHub](https://github.com/rohancoder19/ai-marketing-saas) · [Live Demo](https://ai-marketing-frontend-u3bk.onrender.com/) |
 | **RoadResQ** | Public Safety · Emergency | React, Node.js, Express, MongoDB, JavaScript | [GitHub](https://github.com/rohancoder19/roadresq) · [Live Demo](https://roadresq-app.onrender.com/) |
 | **Autonomous Vigilance Bot** | Robotics · Swarm AI | Python, ESP32, Arduino, OpenCV, Computer Vision, IoT | *Private Repo (Research)* |
 
