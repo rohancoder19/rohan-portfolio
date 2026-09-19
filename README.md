@@ -61,6 +61,7 @@ My-Portfolio/
 
 | Project | Category | Tech Stack | Links |
 | :--- | :--- | :--- | :--- |
+| **EduMentorAI** | Adaptive AI Teacher · Video Masterclass | FastAPI, Python, MongoDB, TypeScript | [GitHub](https://github.com/rohancoder19/EduMentorAI) · [Live Demo](https://edumentor-frontend-fzvv.onrender.com) |
 | **Skill Bridge AI** | Career Tech · AI Platform | React, Node.js, Express, MongoDB, Python, AI APIs | [GitHub](https://github.com/rohancoder19/skill-bridge-ai) · [Live Demo](https://skill-bridge-ai-bx90.onrender.com) |
 | **AI Marketing SaaS** | Marketing · SaaS | React, Node.js, Express, MongoDB, Python, AI APIs | [GitHub](https://github.com/rohancoder19/ai-marketing-saas) · [Live Demo](https://ai-marketing-frontend-u3bk.onrender.com/) |
 | **RoadResQ** | Public Safety · Emergency | React, Node.js, Express, MongoDB, JavaScript | [GitHub](https://github.com/rohancoder19/roadresq) · [Live Demo](https://roadresq-app.onrender.com/) |
