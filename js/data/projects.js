@@ -42,5 +42,16 @@ export const projectsData = [
       private: true,
       label: "Repo Private"
     }
+  },
+ {
+    id: "EduMentorAI",
+    eyebrow: "Adaptive AI Teacher, Code Execution & Video Masterclass Platform",
+    title: "EduMentorAI",
+    description: "EduMentor AI is a production-grade, full-stack adaptive AI teaching system engineered to emulate a master human mentor. Rather than functioning as a standard question-and-answer chatbot, EduMentor AI executes continuous pedagogical feedback, sandboxed multi-language code compilation, AI video synthesis, and multi-modal learning loops.",
+    tags: ["FastAPI" , "Python" , "MongoDB" , "TypeScript"],
+    links: {
+      github: "https://github.com/rohancoder19/EduMentorAI"
+      demo: "https://edumentor-frontend-fzvv.onrender.com"
+    }
   }
 ];
